@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -e
 
+CURRENT_DIR=$(pwd)
+BASE_DIR=$(dirname "$0")
+
+cd "$BASE_DIR"
+
 if [ -z "$REPSY_BASE_URL" ]
 then
     export REPSY_BASE_URL="https://repo.repsy.io"
@@ -100,3 +105,5 @@ then
 fi
 
 rollback_maven_settings
+
+cd "$CURRENT_DIR"

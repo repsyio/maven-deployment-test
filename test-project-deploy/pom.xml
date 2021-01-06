@@ -17,7 +17,7 @@
     <repository>
       <id>repsy</id>
       <name>Repsy Cloud Repo</name>
-      <url>https://repo.repsy.io/mvn/${env.REPSY_USERNAME}/${env.REPSY_REPO_NAME}</url>
+      <url>${env.REPSY_BASE_URL}/mvn/${env.REPSY_USERNAME}/${env.REPSY_REPO_NAME}</url>
     </repository>
   </distributionManagement>
 

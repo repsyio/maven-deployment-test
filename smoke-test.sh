@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -e
 
+if [ -z "$REPSY_BASE_URL" ]
+then
+    export REPSY_BASE_URL="https://repo.repsy.io"
+fi
+
 export REPSY_USERNAME="$1"
 export REPSY_REPO_NAME="$2"
 export REPSY_REPO_PASSWORD="$3"
